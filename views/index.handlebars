@@ -1,0 +1,12 @@
+<h1>YUMMY BURGERS!</h1>
+
+<form action="/burgers/create" method="POST">
+	<textarea name="burger" placeholder=""></textarea>
+	<input type="submit"></input>
+</form>
+
+<h2>Burgers</h2>
+{{#each burgers}}
+	<p>{{id}} : {{burgers}}</p>
+{{/each}}
+
