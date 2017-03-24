@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var port = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -24,4 +24,4 @@ var burgersController = require("./controllers/burgersController.js");
 
 app.use("/", burgersController);
 
-app.listen(port);
+app.listen(PORT);
