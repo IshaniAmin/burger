@@ -6,13 +6,17 @@
 
     <br>
 
+    <img class="col-md-offset-4" src="/assets/img/burger.jpg" alt="Cartoon Burger" style="width:350px;height:300px;">
+
+    <br>
+
     <div class="col-md-6 col-md-offset-3">
     <h2>Which burger do you want to add? </h2>
       <div class="col-md-6 col-md-offset-3">
         <form action="/add" method="POST">
         	<textarea name="burger_name" placeholder=""></textarea>
           <br>
-        	<input class="col-md-offset-3" type="submit" type="button" class="btn btn-primary"></input>
+        	<input id="submitButton" class="col-md-offset-2" type="submit"></input>
         </form>
       </div>
     </div>
@@ -24,11 +28,13 @@
             {{#unless this.devoured}}
               <li>
                 {{this.burger_name}}
-
-                <form action="/{{this.id}}?_method=PUT" method="POST">
-                  <input type="hidden" name="devoured" value="true">
-                  <button type="submit type="button" class="btn btn-primary btn-xs" ">EAT EAT EAT</button>
-                </form>
+                
+                <div>
+                  <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="devoured" value="true">
+                    <button id="eatButton" type="submit">EAT!</button>
+                  </form>
+                </div>
 
               </li>
             {{/unless}}

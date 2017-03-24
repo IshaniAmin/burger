@@ -1,9 +1,20 @@
 
 body {
-	/*background-image: url("https://static.pexels.com/photos/52570/pexels-photo-52570.jpeg");*/
-	background-size: 100%;
+	background-color: #7abf93;
 }
 
 .container {
-	background-color: #7abf93;
 	margin-top: 20px;
+}
+
+#submitButton {
+	width: 100px;
+	height: 25px;
+}
+
+#eatButton {
+	width: 50px;
+	height: 20px;
+}
+
+
