@@ -8,20 +8,20 @@ var burger = {
 		});
 	},
 
-	add: function(value, cb){
-		orm.add("burgers", "burger_name", value, function(res){
+	add: function(cols, vals, cb){
+		orm.add("burgers", cols, vals, function(res){
 			cb(res);
 		});
 	},
 
-	update: function(columnValue, conditionalValue, cb){
-		orm.update("burgers", "devoured", columnValue, "id", conditionalValue, function(res){
+	update: function(objColVals, condition, cb){
+		orm.update("burgers", objColVals, condition, function(res){
 			cb(res);
 		});
 	},
 
-	delete: function (conditionalValue, cb){
-		orm.delete("burgers", "id", conditionalValue, function(res){
+	delete: function (condition, cb){
+		orm.delete("burgers", condition, function(res){
 			cb(res);
 		});
 	},

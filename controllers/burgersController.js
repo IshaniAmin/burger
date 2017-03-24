@@ -13,8 +13,8 @@ router.get("/", function(req, res){
 })
 
 
-router.post("/new"), function(req, res){
-	burger.add(req.body.burger, function(res){
+router.post("/add"), function(req, res){
+	burger.add(["burger_name"], [req.body.burger_name], function(response){
 		res.redirect('/');
 	})
 	console.log(res);
